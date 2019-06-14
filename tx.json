@@ -1,0 +1,12 @@
+{
+    "name": "tx",
+    "script": "index.js",
+    "exec_interpreter": "node",
+    "exec_mode": "fork",
+    "watch" : true,
+      "env" : {
+        "NODE_ENV": "production",
+        "log_date_format" : "YYYY-MM-DD HH:mm:ss",
+        
+     }
+}
