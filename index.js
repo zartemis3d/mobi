@@ -3,7 +3,7 @@ const Web3 = require('web3')
 const schedule = require('node-schedule');
 const cfg = require('./config')
 const db = require('./mydb');
-const ks = require('./key');
+ 
 const tx = require('./sendtx')
 const watcher = require('./watcher')
 
