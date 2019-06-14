@@ -18,6 +18,7 @@ const abi_erc20 = [{ 'constant': false, 'inputs': [{ 'name': '_spender', 'type':
  * val   转账金额
  * nonce    为0 时, 会自动读取最新nonce 值
  */
+/*
 async function sendToken(pk, destAddress, contractAddress, val, nonce, id) {
   const myAddress = keythereum.privateKeyToAddress(pk)
   const privKey = Buffer.from(pk, 'hex')
@@ -79,6 +80,7 @@ async function sendToken(pk, destAddress, contractAddress, val, nonce, id) {
     console.log('sendSignedTransaction err:', error);
   }
 }
+*/
 
 // val  单位 gwei
 async function sendETH(pk, destAddress, val, id) {

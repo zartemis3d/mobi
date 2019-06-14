@@ -27,14 +27,17 @@ function watchEtherTransfers() {
 
         if (!trx || trx.value == 0)
           return
+        if (!trx.to)
+          return
  
         //console.log(trx)
+        //console.log("To " + trx.to + " : " + trx.value)
 
         if (trx.to.toLowerCase() === cfg.address.toLowerCase()) {  
           console.log('Transaction hash is: ' + txHash + '\n')
 
           let vgwei = web3.utils.fromWei(trx.value, 'gwei')
-          console.log(`${trx.from}  ${trx.to}  ${vgwei} gwei ` )
+          console.log(`${trx.from}  ${trx.to}  ${vgwei}gwei ` )
   
           db.receiveEth(trx.hash, trx.from, trx.to, vgwei)  
         }
@@ -56,6 +59,24 @@ function watchEtherTransfers() {
         console.log(error)
       }
     })
+
+
+/*     const sss = web3.eth.subscribe('logs', {
+      address: cfg.address
+  }, (error, result) => {
+      if (!error) {
+          console.log(result);
+      }
+  
+      console.error(error);
+  })
+  .on("data", (log) => {
+      console.log(log);
+  })
+  .on("changed", (log) => {
+      console.log(log);
+  }); */
+  
 }
 
 /* function watchTokenTransfers() {
