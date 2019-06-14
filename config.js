@@ -22,7 +22,7 @@ module.exports = {
     provider: 'wss://mainnet.infura.io/ws',      //以太坊服务节点,
     //provider: 'https://mainnet.infura.io/v3/40da3111ca294cb9941fec79566117ef',  //以太坊服务节点, 目前使用的是网络的, 为了性能, 应该用geth建立本地节点
     //provider : '127.0.0.1:8545',  //本地节点
-    //provider : 'https://ropsten.infura.io/v3/40da3111ca294cb9941fec79566117ef',  //测试节点
+    //provider :  'wss://ropsten.infura.io/ws'  //测试节点   'wss://ropsten-rpc.linkpool.io/ws',    'wss://ropsten.infura.io/ws'
     
  
 }
